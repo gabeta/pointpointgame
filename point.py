@@ -4,27 +4,14 @@
 # Catégorie        : Stratégie
 # Auteur           : Gabeta Soro
 # Compagnie        : EnighmaLab
-# Date de création : 20/05/2017
+# Date de création : 17/05/2017
 #
 ########################################################
-class Player(object):
-
-    def __init__(self,color=''):
-        self.color = color
-        self.score = 0
-
-    def getColor(self):
-        return self.color
-
-    def getScore(self):
-        return self.score
-
-    def setScore(self):
-        self.score = self.score + 1
-
 
 from tkinter import *
 from math import *
+
+from player import Player
 
 begin = False
 
@@ -74,7 +61,7 @@ def checkRayon(x,y):
         return False
 
 #Arrondir à la au multiple le plus proche de 30
-def rang_tenthy(val):
+def rang_twenthy(val):
     R = val % 30
 
     if (R == 1):
@@ -120,7 +107,6 @@ def top_right_pivot(x,y):
 def bottom_left_pivot(x,y):
     x2 = x - 30
     y2 = y + 30
-    y3 = y - 30
 
     P = str(str(x)+'_'+str(y))
     P2 = str(str(x2)+'_'+str(y))
@@ -138,14 +124,13 @@ def bottom_right_pivot(x,y):
     y2 = y + 30
 
     P = str(str(x)+'_'+str(y))
-    P2 = str(str(x2)+'_'+str(y))
-    P3 = str(str(x)+'_'+str(y2))
-    P4 = str(str(x3)+'_'+str(y2))
+    P2 = str(str(x)+'_'+str(y2))
+    P3 = str(str(x2)+'_'+str(y))
+    P4 = str(str(x2)+'_'+str(y2))
 
     if(P2 in point_dico) & (P3 in point_dico) & (P4 in point_dico):
         if(point_dico[P] == point_dico[P2]) & (point_dico[P] == point_dico[P3]) & (point_dico[P] == point_dico[P4]):
             return True
-
 
 #Création du point
 def point(event):
@@ -154,8 +139,8 @@ def point(event):
 
         if(overFlow(event.y,event.x) & checkRayon(event.y,event.x)):
 
-            event.y = rang_tenthy(event.y)
-            event.x = rang_tenthy(event.x)
+            event.y = rang_twenthy(event.y)
+            event.x = rang_twenthy(event.x)
             value = str(str(event.x)+'_'+str(event.y))
 
             if(value in point_dico):
@@ -238,11 +223,10 @@ def point(event):
                     current_p = P1
                     next_color = "bleu"
 
+                chaine.configure(text = "")
                 load.configure(text = "Au tour du joueur "+next_color+" de jouer. Veuillez patienter!!")
 
-
 #Corps principale du programme
-
 fen = Tk()
 fen.title("Point point Game By EnighmaLab")
 
