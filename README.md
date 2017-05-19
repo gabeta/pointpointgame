@@ -11,10 +11,10 @@ python et les possibilité qu'il nous offre.
 ## Tester
 
 Avant toutes choses assurer vous que vous avez installer python sous
-votre machine. Le code a été écrire sous python 3.
+votre machine. Le code a été écrit sous python 3.
 
 Télécharger ou cloner le projet ensuite rendez vous dans le dossier
-du projet ouvrer votre invite de commande et faite :
+du projet ouvrer votre invite de commande et faites :
 
 `py point.py`
 
