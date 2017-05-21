@@ -19,6 +19,9 @@ P1 = Player('blue')
 P2 = Player('red')
 current_p = P1
 
+space = 30
+TWdHg = 540
+
 point_dico = {}
 
 #Crétation de la plateform de jeu
@@ -29,9 +32,9 @@ def create_plateform():
         info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
         info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
 
-        while d < 630 :
-            can.create_line(d, 0, d, 630, fill ='cyan') #Création de la ligne horizontale avec un espacement de 30
-            can.create_line(0, d, 630, d, fill ='cyan') #Création de la ligne verticale avec un espacement de 30
+        while d < TWdHg :
+            can.create_line(d, 0, d, TWdHg, fill ='cyan') #Création de la ligne horizontale avec un espacement de 30
+            can.create_line(0, d, TWdHg, d, fill ='cyan') #Création de la ligne verticale avec un espacement de 30
             d = d + 30
 
         global begin
@@ -39,8 +42,8 @@ def create_plateform():
 
 #Vérifie si l'utilisateur est dans la zone de jeu
 def overFlow(x,y):
-    if(y <= 600) & (y >= 30):
-        if(x <= 600) & (x >= 30):
+    if(y <= (TWdHg - space)) & (y >= space):
+        if(x <= (TWdHg - space)) & (x >= space):
             return True
         else:
             return False
@@ -49,11 +52,11 @@ def overFlow(x,y):
 
 #Verifie la porté du point de l'utilisateur avec une marge de 2
 def checkRayon(x,y):
-    Rx = x % 30
-    Ry = y % 30
+    Rx = x % space
+    Ry = y % space
 
-    if(Ry == 0) | (Ry == 1) | (Ry == 2) | (Ry == 28) | (Ry == 29):
-        if(Rx == 0) | (Rx == 1) | (Rx == 2) | (Rx == 28) | (Rx == 29):
+    if(Ry == 0) | (Ry == 1) | (Ry == 2) | (Ry == (space - 2)) | (Ry == (space - 1)):
+        if(Rx == 0) | (Rx == 1) | (Rx == 2) | (Rx == (space - 2)) | (Rx == (space - 1)):
             return True
         else:
             return False
@@ -62,23 +65,23 @@ def checkRayon(x,y):
 
 #Arrondir à la au multiple le plus proche de 30
 def rang_twenthy(val):
-    R = val % 30
+    R = val % space
 
     if (R == 1):
         val = val - 1
-    elif (R == 29):
+    elif (R == (space - 1)):
         val = val +1
     elif (R == 2):
         val = val - 2
-    elif (R == 28):
+    elif (R == (space - 2)):
         val = val + 2
 
     return val
 
 #Vérification d'un carré en haut à gauche
 def top_left_pivot(x,y):
-    x2 = x - 30
-    y2 = y - 30
+    x2 = x - space
+    y2 = y - space
     P = str(str(x)+'_'+str(y))
     P2 = str(str(x)+'_'+str(y2))
     P3 = str(str(x2)+'_'+str(y))
@@ -90,8 +93,8 @@ def top_left_pivot(x,y):
 
 #Vérification d'un carré en haut à droite
 def top_right_pivot(x,y):
-    x2 = x + 30
-    y2 = y - 30
+    x2 = x + space
+    y2 = y - space
     P = str(str(x)+'_'+str(y))
     P2 = str(str(x)+'_'+str(y2))
     P3 = str(str(x2)+'_'+str(y2))
@@ -105,8 +108,8 @@ def top_right_pivot(x,y):
 
 #Vérification d'un carré en bas à gauche
 def bottom_left_pivot(x,y):
-    x2 = x - 30
-    y2 = y + 30
+    x2 = x - space
+    y2 = y + space
 
     P = str(str(x)+'_'+str(y))
     P2 = str(str(x2)+'_'+str(y))
@@ -119,9 +122,9 @@ def bottom_left_pivot(x,y):
 
 #Vérification d'un carré en bas à gauche
 def bottom_right_pivot(x,y):
-    x2 = x + 30
-    x3 = x - 30
-    y2 = y + 30
+    x2 = x + space
+    x3 = x - space
+    y2 = y + space
 
     P = str(str(x)+'_'+str(y))
     P2 = str(str(x)+'_'+str(y2))
@@ -165,7 +168,7 @@ def point(event):
                     else:
                         P2.setScore()
 
-                    can.create_rectangle(event.x-30, event.y-30, event.x, event.y, fill=current_p.getColor())
+                    can.create_rectangle(event.x-space, event.y-space, event.x, event.y, fill=current_p.getColor())
 
                     info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
                     info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
@@ -179,7 +182,7 @@ def point(event):
                     else:
                         P2.setScore()
 
-                    can.create_rectangle(event.x, event.y-30, event.x+30, event.y, fill=current_p.getColor())
+                    can.create_rectangle(event.x, event.y-space, event.x+space, event.y, fill=current_p.getColor())
 
                     info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
                     info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
@@ -193,7 +196,7 @@ def point(event):
                     else:
                         P2.setScore()
 
-                    can.create_rectangle(event.x, event.y+30, event.x-30, event.y, fill=current_p.getColor())
+                    can.create_rectangle(event.x, event.y+space, event.x-space, event.y, fill=current_p.getColor())
 
                     info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
                     info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
@@ -207,7 +210,7 @@ def point(event):
                     else:
                         P2.setScore()
 
-                    can.create_rectangle(event.x, event.y, event.x+30, event.y+30, fill=current_p.getColor())
+                    can.create_rectangle(event.x, event.y, event.x+space, event.y+space, fill=current_p.getColor())
 
                     info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
                     info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
@@ -224,19 +227,22 @@ def point(event):
                     next_color = "bleu"
 
                 chaine.configure(text = "")
-                load.configure(text = "Au tour du joueur "+next_color+" de jouer. Veuillez patienter!!")
+                role.configure(text="Au tour du joueur "+next_color+" de jouer. ")
+                load.configure(text ="Veuillez patienter!!")
 
 #Corps principale du programme
 fen = Tk()
 fen.title("Point point Game By EnighmaLab")
 
-can = Canvas(fen, width =630, height =630, bg="light yellow")
+can = Canvas(fen, width =TWdHg, height =TWdHg, bg="light yellow")
 can.bind('<Button-1>', point)
 can.pack()
 
-b1 = Button(fen, text ='Commencer', command =create_plateform)
-b1.pack(side =LEFT, padx =3, pady =3)
+b1 = Button(fen, text='Commencer', command=create_plateform)
+b1.pack()
 
+role = Label(fen)
+role.pack()
 
 load = Label(fen)
 load.pack()
