@@ -15,12 +15,15 @@ from player import Player
 
 begin = False
 
+#Paramètre Joueur
 P1 = Player('blue')
 P2 = Player('red')
 current_p = P1
 
+#Paramètre Terrain
 space = 30
-TWdHg = 540
+Theight = 630
+Twidth = 540
 
 point_dico = {}
 
@@ -32,18 +35,32 @@ def create_plateform():
         info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
         info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
 
-        while d < TWdHg :
-            can.create_line(d, 0, d, TWdHg, fill ='cyan') #Création de la ligne horizontale avec un espacement de 30
-            can.create_line(0, d, TWdHg, d, fill ='cyan') #Création de la ligne verticale avec un espacement de 30
-            d = d + 30
+        horizontalLine()
+        verticalLine()
 
         global begin
         begin = True
 
+#Création de la ligne horizontale avec un espacement de 30
+def horizontalLine():
+    d = 0
+    while d < Twidth :
+        can.create_line(d, 0, d, Theight, fill ='cyan') #Création de la ligne horizontale avec un espacement de 30
+        #can.create_line(0, d, TWdHg, d, fill ='cyan') #Création de la ligne verticale avec un espacement de 30
+        d = d + space
+
+#Création de la ligne verticale avec un espacement de 30
+def verticalLine():
+    d = 0
+    while d < Theight :
+        #can.create_line(d, 0, d, Theight, fill ='cyan') #Création de la ligne horizontale avec un espacement de 30
+        can.create_line(0, d, Twidth, d, fill ='cyan') #Création de la ligne verticale avec un espacement de 30
+        d = d + space
+
 #Vérifie si l'utilisateur est dans la zone de jeu
 def overFlow(x,y):
-    if(y <= (TWdHg - space)) & (y >= space):
-        if(x <= (TWdHg - space)) & (x >= space):
+    if(y <= (Twidth - space)) & (y >= space):
+        if(x <= (Theight - space)) & (x >= space):
             return True
         else:
             return False
@@ -234,7 +251,7 @@ def point(event):
 fen = Tk()
 fen.title("Point point Game By EnighmaLab")
 
-can = Canvas(fen, width =TWdHg, height =TWdHg, bg="light yellow")
+can = Canvas(fen, width =Twidth, height =Theight, bg="light yellow")
 can.bind('<Button-1>', point)
 can.pack()
 
