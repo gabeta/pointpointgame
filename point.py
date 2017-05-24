@@ -22,8 +22,10 @@ current_p = P1
 
 #Paramètre Terrain
 space = 30
-Theight = 630
-Twidth = 540
+Theight = 540
+Twidth = 630
+
+#nbr de point = (Theight/space) * (Twidth/space)
 
 point_dico = {}
 
