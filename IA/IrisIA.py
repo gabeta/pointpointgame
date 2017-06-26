@@ -10,16 +10,21 @@
 #
 ########################################################
 
+from random import randrange
+
+import time
+
 from Environnement.pivot import Pivot
 from Environnement.terrain import Terrain
 
 class IrisIA(object):
 
+    ownDico = {}
+    otherDico = {}
+    score = 0
+
     def __init__(self,color):
-        self.ownDico = {}
-        self.otherDico = {}
         self.color = color
-        self.score = 0
 
     def checkIsFavorablePosition(self,dico):
         #Parcourt le dictionnaire
@@ -40,6 +45,40 @@ class IrisIA(object):
     def checkOtherDico(self):
         if self.checkIsFavorablePosition():
             pass
+
+    def randPoint(self,can,point_dico):
+
+        r = 5
+        xMod = 1
+        yMod = 1
+        boucle = True
+
+        while boucle:
+
+
+            while xMod:
+                x = randrange(30, (630 - 30))
+                xMod = x % 30
+
+            while yMod:
+                y = randrange(30, (540 - 30))
+                yMod = y % 30
+
+            point = str(str(x)+'_'+str(y))
+
+            if point in point_dico:
+                time.sleep(2)
+                boucle = True
+            else:
+                boucle = False
+
+        can.create_oval(x-r, y-r, x+r, y+r, fill=self.getColor())
+
+        point = {}
+        point['x'] = x
+        point['y'] = y
+
+        return point
 
     #Dictionnaire de point de l'IA. ce Dictionnaire permettra de connaitre tous les emplacements des points de l'IA.
     def getOwnDico(self):
@@ -64,3 +103,6 @@ class IrisIA(object):
     #Modification du score de l'IA
     def setScore(self):
         return self.score + 1
+
+    def getColor(self):
+        return self.color

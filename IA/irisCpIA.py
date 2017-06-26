@@ -15,6 +15,9 @@ from IA.IrisIA import IrisIA
 
 class IrisCpIA(IrisIA):
 
+    def __init__(self,color):
+        IrisIA.__init__(self,color)
+
     def defense(self):
         pass
 

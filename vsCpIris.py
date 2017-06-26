@@ -1,7 +1,7 @@
 ########################################################
 #                  POINT POINT GAME
 #
-# Catégorie        e: Stratégie
+# Catégorie        : Stratégie
 # Auteur           : Gabeta Soro (Alchimiste des codes)
 # Compagnie        : EnighmaLab
 # Date de création : 26/06/2017
@@ -39,7 +39,6 @@ point_dico = {}
 
 #Crétation de la plateform de jeu
 def create_plateform():
-
 
     if(begin is False):
         d = 0
@@ -118,6 +117,7 @@ def point(event):
 
         if(terrain.overFlow(event.y,event.x) & terrain.checkRayon(event.y,event.x)):
 
+
             event.y = terrain.rang_twenthy(event.y)
             event.x = terrain.rang_twenthy(event.x)
             value = str(str(event.x)+'_'+str(event.y))
@@ -136,16 +136,32 @@ def point(event):
 
                 P2.setOtherDico(value,current_p.getColor())
 
-                #global current_p
-                #current_p = P2
+                global current_p
+                current_p = P2
 
-                #IAtour()
+                IAtour()
 
 #Au tour de l'IA de jouer.
 def IAtour():
-    pass
-    #global current_p
-    #current_p = P1
+
+    #Début du jeu faire un point aléatoire
+    point = P2.randPoint(can,point_dico)
+    x = point['x']
+    y = point['y']
+
+    #Enregistrement des coordonnées dans le dictionnaire global.
+    coord = str(str(x)+'_'+str(y))
+    point_dico[coord] = current_p.getColor()
+
+    #Enregistrer les cordonnées de l'IA dans son dico
+    P2.setOwnDico(coord)
+
+    #Tentative de faire un carré si possible
+    makeCarre(x,y)
+
+    #Donner la main à l'utilisateur
+    global current_p
+    current_p = P1
 
 #Corps principale du programme
 fen = Tk()
