@@ -2,7 +2,7 @@
 #                  POINT POINT GAME
 #
 # Catégorie        : Stratégie
-# Auteur           : Gabeta Soro
+# Auteur           : Gabeta Soro (Alchimiste des codes)
 # Compagnie        : EnighmaLab
 # Date de création : 17/05/2017
 #
@@ -12,6 +12,8 @@ from tkinter import *
 from math import *
 
 from player import Player
+from pivot import Pivot
+
 
 begin = False
 
@@ -20,13 +22,15 @@ P1 = Player('blue')
 P2 = Player('red')
 current_p = P1
 
+#Classe qui gère les pivot
+Pivot = Pivot()
+
 #Paramètre Terrain
 space = 30
 Theight = 540
 Twidth = 630
 
-#nbr de point = (Theight/space) * (Twidth/space)
-
+#Dictionnaire des points
 point_dico = {}
 
 #Crétation de la plateform de jeu
@@ -97,63 +101,6 @@ def rang_twenthy(val):
 
     return val
 
-#Vérification d'un carré en haut à gauche
-def top_left_pivot(x,y):
-    x2 = x - space
-    y2 = y - space
-    P = str(str(x)+'_'+str(y))
-    P2 = str(str(x)+'_'+str(y2))
-    P3 = str(str(x2)+'_'+str(y))
-    P4 = str(str(x2)+'_'+str(y2))
-
-    if(P2 in point_dico) & (P3 in point_dico) & (P4 in point_dico):
-        if(point_dico[P] == point_dico[P2]) & (point_dico[P] == point_dico[P3]) & (point_dico[P] == point_dico[P4]):
-            return True
-
-#Vérification d'un carré en haut à droite
-def top_right_pivot(x,y):
-    x2 = x + space
-    y2 = y - space
-    P = str(str(x)+'_'+str(y))
-    P2 = str(str(x)+'_'+str(y2))
-    P3 = str(str(x2)+'_'+str(y2))
-    P4 = str(str(x2)+'_'+str(y))
-
-    if(P2 in point_dico) & (P3 in point_dico) & (P4 in point_dico):
-
-        if(point_dico[P] == point_dico[P2]) & (point_dico[P] == point_dico[P3]) & (point_dico[P] == point_dico[P4]):
-
-            return True
-
-#Vérification d'un carré en bas à gauche
-def bottom_left_pivot(x,y):
-    x2 = x - space
-    y2 = y + space
-
-    P = str(str(x)+'_'+str(y))
-    P2 = str(str(x2)+'_'+str(y))
-    P3 = str(str(x2)+'_'+str(y2))
-    P4 = str(str(x)+'_'+str(y2))
-
-    if(P2 in point_dico) & (P3 in point_dico) & (P4 in point_dico):
-        if(point_dico[P] == point_dico[P2]) & (point_dico[P] == point_dico[P3]) & (point_dico[P] == point_dico[P4]):
-            return True
-
-#Vérification d'un carré en bas à gauche
-def bottom_right_pivot(x,y):
-    x2 = x + space
-    x3 = x - space
-    y2 = y + space
-
-    P = str(str(x)+'_'+str(y))
-    P2 = str(str(x)+'_'+str(y2))
-    P3 = str(str(x2)+'_'+str(y))
-    P4 = str(str(x2)+'_'+str(y2))
-
-    if(P2 in point_dico) & (P3 in point_dico) & (P4 in point_dico):
-        if(point_dico[P] == point_dico[P2]) & (point_dico[P] == point_dico[P3]) & (point_dico[P] == point_dico[P4]):
-            return True
-
 #Création du point
 def point(event):
 
@@ -173,14 +120,11 @@ def point(event):
 
                 r = 5
 
-                #chaine.configure(text = "Clic détecté en X =" + str(event.x) +\
-                #    ", Y =" + str(event.y))
-
                 point_dico[value] = current_p.getColor()
 
                 can.create_oval(event.x-r, event.y-r, event.x+r, event.y+r, fill=current_p.getColor())
 
-                if(top_left_pivot(event.x,event.y)):
+                if(Pivot.top_left(event.x,event.y,space,point_dico)):
 
                     if(current_p == P1):
                         P1.setScore()
@@ -194,7 +138,7 @@ def point(event):
 
                     chaine.configure(text = "Jolie point")
 
-                if(top_right_pivot(event.x,event.y)):
+                if(Pivot.top_right(event.x,event.y,space,point_dico)):
 
                     if(current_p == P1):
                         P1.setScore()
@@ -208,7 +152,7 @@ def point(event):
 
                     chaine.configure(text = "Jolie point")
 
-                if(bottom_left_pivot(event.x,event.y)):
+                if(Pivot.bottom_left(event.x,event.y,space,point_dico)):
 
                     if(current_p == P1):
                         P1.setScore()
@@ -222,7 +166,7 @@ def point(event):
 
                     chaine.configure(text = "Jolie point")
 
-                if(bottom_right_pivot(event.x,event.y)):
+                if(Pivot.bottom_right(event.x,event.y,space,point_dico)):
 
                     if(current_p == P1):
                         P1.setScore()
