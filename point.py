@@ -23,7 +23,7 @@ P1 = Player('blue')
 P2 = Player('red')
 current_p = P1
 
-#Classe qui gère les pivot
+#Classe qui gère les pivot(Vérifie que les points de même couleurs forment un carré)
 Pivot = Pivot()
 
 #Paramètre du terrain
