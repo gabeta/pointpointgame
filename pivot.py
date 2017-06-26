@@ -4,7 +4,7 @@
 # Catégorie        : Stratégie
 # Auteur           : Gabeta Soro (Alchimiste des codes)
 # Compagnie        : EnighmaLab
-# Date de création : 26/06/2017
+# Date de création : 17/05/2017
 # Module           : Pivot
 #
 ########################################################
