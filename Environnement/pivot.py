@@ -76,13 +76,20 @@ class Pivot(object):
       P2 = str(str(x)+'_'+str(y2))
       P3 = str(str(x2)+'_'+str(y))
       P4 = str(str(x2)+'_'+str(y2))
+      point = {}
 
       if(P2 in point_dico):
-          return False
+          return point
       else:
           if(P in point_dico) & (P3 in point_dico) & (P4 in point_dico):
               if(point_dico[P] == point_dico[P3]) & (point_dico[P] == point_dico[P4]):
-                  return {x,y2}
+                  point['x'] = x
+                  point['y'] = y2
+                  return point
+              else:
+                  return point
+          else:
+              return point
 
 
   def get_point_right(self,x,y,space,point_dico):

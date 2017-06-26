@@ -144,10 +144,35 @@ def point(event):
 #Au tour de l'IA de jouer.
 def IAtour():
 
-    #Début du jeu faire un point aléatoire
-    point = P2.randPoint(can,point_dico)
-    x = point['x']
-    y = point['y']
+    if(len(P2.getOwnDico()) == 0):
+
+        #Début du jeu faire un point aléatoire
+        point = P2.randPoint(can,point_dico)
+        x = point['x']
+        y = point['y']
+
+    else:
+        attack = P2.checkOtherDico(point_dico,space)
+        if(len(attack)):
+            x = attack['x']
+            y = attack['y']
+        else:
+            point = P2.randPoint(can,point_dico)
+            x = point['x']
+            y = point['y']
+
+        #Vérification de l'Etat des lieux
+        #if(P2.checkOtherDico(point_dico,space) & P2.checkOwnDico(point_dico,space)):
+        #    pass
+        #else:
+        #    pass
+            #Vérification si il y a un possibilité de construire
+        #    if(P2.canBuild()):
+        #        pass
+        #    else:
+        #        point = P2.randPoint(can,point_dico)
+        #        x = point['x']
+        #       y = point['y']
 
     #Enregistrement des coordonnées dans le dictionnaire global.
     coord = str(str(x)+'_'+str(y))

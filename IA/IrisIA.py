@@ -17,34 +17,59 @@ import time
 from Environnement.pivot import Pivot
 from Environnement.terrain import Terrain
 
+pivot = Pivot()
+
 class IrisIA(object):
 
     ownDico = {}
     otherDico = {}
     score = 0
+    attackDico = {}
+    defenseDico = {}
 
     def __init__(self,color):
         self.color = color
 
-    def checkIsFavorablePosition(self,dico):
+    def buildDico(self,dico,point_dico,space,attack):
         #Parcourt le dictionnaire
         for k in dico:
             #Exploder le K par les enderscorts
             array = k.split('_')
             x = int(array[0])
             y = int(array[1])
-            top = Pivot.get_point_top(x,y,Terrain.getSpace(),dico)
+            top = pivot.get_point_top(x,y,space,point_dico)
 
-            #Vérifie si il y a une possibilité de marquer
-            pass
+            self.makeBatlleDico(top,attack)
 
-    def checkOwnDico(self):
-        if self.checkIsFavorablePosition():
-            pass
+    def makeBatlleDico(self,dico,attack):
+        if(len(dico)):
+            if(attack):
+                if (dico['x'],dico['y']) in self.attackDico:
+                    self.attackDico[(dico['x'],dico['y'])] = self.attackDico[(dico['x'],dico['y'])] + 1
+                else:
+                    self.attackDico[(dico['x'],dico['y'])] = 1
+            else:
+                if (dico['x'],dico['y']) in self.defenseDico:
+                    self.defenseDico[(dico['x'],dico['y'])] = self.defenseDico[(dico['x'],dico['y'])] + 1
+                else:
+                    self.defenseDico[(dico['x'],dico['y'])] = 1
 
-    def checkOtherDico(self):
-        if self.checkIsFavorablePosition():
-            pass
+
+    def checkOwnDico(self,dico,space):
+        if(len(self.attackDico) is False):
+            self.buildDico(self.ownDico,dico,space,True)
+        return self.attackDico
+
+
+    def checkOtherDico(self,dico,space):
+        if(len(self.defenseDico) is False):
+            return self.buildDico(self.otherDico,dico,space,False)
+        return self.defenseDico
+
+
+    def canBuild(self):
+        pass
+
 
     def randPoint(self,can,point_dico):
 
@@ -94,7 +119,7 @@ class IrisIA(object):
 
     #Modification du dictionnaire du joueur
     def setOtherDico(self,coord,color):
-        self.ownDico[coord] = color
+        self.otherDico[coord] = color
 
     #Score de l'IA
     def getScore(self):
