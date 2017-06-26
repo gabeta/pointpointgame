@@ -16,10 +16,18 @@ votre machine. Le code a été écrit sous python 3.
 Télécharger ou cloner le projet ensuite rendez vous dans le dossier
 du projet ouvrer votre invite de commande et faites :
 
+Pour jouer entre deux joueur d'un même PC
+
 `py point.py`
 
+Pour jouer contre l'IA(Iris niveau CP1/CP2)
+
+`py vsCpIris.py`
+
+Nb: l'exécutable du jeu sera disponible quand l'IA niveau CE1/CE2 sera
+    diponible.
 
 ## Contribuer
 
-Faites un fork du projet. Ajouter vos modifications et  faites moi un
+Faites un fork du projet. Ajouter vos modifications et faites moi un
 pull request.

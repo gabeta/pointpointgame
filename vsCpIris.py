@@ -1,11 +1,12 @@
 ########################################################
 #                  POINT POINT GAME
 #
-# Catégorie        : Stratégie
+# Catégorie        e: Stratégie
 # Auteur           : Gabeta Soro (Alchimiste des codes)
 # Compagnie        : EnighmaLab
 # Date de création : 26/06/2017
 # Scène            : Player vs Iris-CP12
+# Niveau de l'IA   : Elève CP1/CP2
 #
 ########################################################
 
@@ -110,6 +111,7 @@ def makeCarre(x,y):
 
         chaine.configure(text = "Jolie point")
 
+#Au tour de l'utilisateur de jouer
 def point(event):
 
     if (begin) & (current_p == P1):
@@ -132,11 +134,14 @@ def point(event):
 
                 makeCarre(event.x,event.y)
 
+                P2.setOtherDico(value,current_p.getColor())
+
                 #global current_p
                 #current_p = P2
 
                 #IAtour()
 
+#Au tour de l'IA de jouer.
 def IAtour():
     pass
     #global current_p
