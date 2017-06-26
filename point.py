@@ -5,11 +5,11 @@
 # Auteur           : Gabeta Soro (Alchimiste des codes)
 # Compagnie        : EnighmaLab
 # Date de création : 17/05/2017
+# Scène            : Player vs Player
 #
 ########################################################
 
 from tkinter import *
-from math import *
 
 from player import Player
 from pivot import Pivot
