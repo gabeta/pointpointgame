@@ -5,7 +5,9 @@
 # Auteur           : Gabeta Soro (Alchimiste des codes)
 # Compagnie        : EnighmaLab
 # Date de création : 26/06/2017
-# Module           : Intelligence Articielle : Iris
+# Module           : Intelligence Articielle
+# Numéro IA        : Iris-CP-12
+# Niveau           : CP1/CP2
 #
 ########################################################
 
