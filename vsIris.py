@@ -12,7 +12,7 @@
 from tkinter import *
 
 from Environnement.player import Player
-from IA.irisIA import IrisIA
+from IA.irisCpIA import IrisCpIA
 from Environnement.pivot import Pivot
 
 
@@ -20,7 +20,7 @@ begin = False
 
 #Paramètre Joueur
 P1 = Player('blue')
-P2 = IrisIA('red')
+P2 = IrisCpIA('red')
 current_p = P1
 
 #Classe qui gère les pivot

@@ -11,7 +11,7 @@
 #
 ########################################################
 
-class IrisIA(object):
+class IrisCpIA(object):
 
 
     def __init__(self,color):
