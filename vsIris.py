@@ -11,16 +11,16 @@
 
 from tkinter import *
 
-from player import Player
-from irisIA import IrisIA
-from pivot import Pivot
+from Environnement.player import Player
+from IA.irisIA import IrisIA
+from Environnement.pivot import Pivot
 
 
 begin = False
 
 #Paramètre Joueur
 P1 = Player('blue')
-P2 = IrisIA()
+P2 = IrisIA('red')
 current_p = P1
 
 #Classe qui gère les pivot

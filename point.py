@@ -11,9 +11,9 @@
 
 from tkinter import *
 
-from player import Player
-from pivot import Pivot
-from terrain import Terrain
+from Environnement.player import Player
+from Environnement.pivot import Pivot
+from Environnement.terrain import Terrain
 
 
 begin = False
