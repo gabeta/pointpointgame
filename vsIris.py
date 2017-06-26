@@ -51,6 +51,64 @@ def create_plateform():
         global begin
         begin = True
 
+#Marquer un point en faisant un carré
+def makeCarre(x,y):
+
+    if(Pivot.top_left(x,y,space,point_dico)):
+
+        if(current_p == P1):
+            P1.setScore()
+        else:
+            P2.setScore()
+
+        can.create_rectangle(x-space, y-space, x, y, fill=current_p.getColor())
+
+        info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
+        info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
+
+        chaine.configure(text = "Jolie point")
+
+    if(Pivot.top_right(x,y,space,point_dico)):
+
+        if(current_p == P1):
+            P1.setScore()
+        else:
+            P2.setScore()
+
+        can.create_rectangle(x, y-space, x+space, y, fill=current_p.getColor())
+
+        info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
+        info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
+
+        chaine.configure(text = "Jolie point")
+
+    if(Pivot.bottom_left(x,y,space,point_dico)):
+
+        if(current_p == P1):
+            P1.setScore()
+        else:
+            P2.setScore()
+
+        can.create_rectangle(x, y+space, x-space, y, fill=current_p.getColor())
+
+        info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
+        info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
+
+        chaine.configure(text = "Jolie point")
+
+    if(Pivot.bottom_right(x,y,space,point_dico)):
+
+        if(current_p == P1):
+            P1.setScore()
+        else:
+            P2.setScore()
+
+        can.create_rectangle(x, y, x+space, y+space, fill=current_p.getColor())
+
+        info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
+        info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
+
+        chaine.configure(text = "Jolie point")
 
 def point(event):
 
@@ -72,17 +130,17 @@ def point(event):
                 point_dico[value] = current_p.getColor()
                 can.create_oval(event.x-r, event.y-r, event.x+r, event.y+r, fill=current_p.getColor())
 
-                global current_p
-                current_p = P2
+                makeCarre(event.x,event.y)
 
-                IAtour()
+                #global current_p
+                #current_p = P2
 
+                #IAtour()
 
 def IAtour():
     pass
     #global current_p
     #current_p = P1
-
 
 #Corps principale du programme
 fen = Tk()

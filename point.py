@@ -49,6 +49,65 @@ def create_plateform():
         global begin
         begin = True
 
+#Marquer un point en faisant un carré
+def makeCarre(x,y):
+
+    if(Pivot.top_left(x,y,space,point_dico)):
+
+        if(current_p == P1):
+            P1.setScore()
+        else:
+            P2.setScore()
+
+        can.create_rectangle(x-space, y-space, x, y, fill=current_p.getColor())
+
+        info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
+        info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
+
+        chaine.configure(text = "Jolie point")
+
+    if(Pivot.top_right(x,y,space,point_dico)):
+
+        if(current_p == P1):
+            P1.setScore()
+        else:
+            P2.setScore()
+
+        can.create_rectangle(x, y-space, x+space, y, fill=current_p.getColor())
+
+        info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
+        info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
+
+        chaine.configure(text = "Jolie point")
+
+    if(Pivot.bottom_left(x,y,space,point_dico)):
+
+        if(current_p == P1):
+            P1.setScore()
+        else:
+            P2.setScore()
+
+        can.create_rectangle(x, y+space, x-space, y, fill=current_p.getColor())
+
+        info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
+        info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
+
+        chaine.configure(text = "Jolie point")
+
+    if(Pivot.bottom_right(x,y,space,point_dico)):
+
+        if(current_p == P1):
+            P1.setScore()
+        else:
+            P2.setScore()
+
+        can.create_rectangle(x, y, x+space, y+space, fill=current_p.getColor())
+
+        info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
+        info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
+
+        chaine.configure(text = "Jolie point")
+
 #Création du point
 def point(event):
 
@@ -72,61 +131,7 @@ def point(event):
 
                 can.create_oval(event.x-r, event.y-r, event.x+r, event.y+r, fill=current_p.getColor())
 
-                if(Pivot.top_left(event.x,event.y,space,point_dico)):
-
-                    if(current_p == P1):
-                        P1.setScore()
-                    else:
-                        P2.setScore()
-
-                    can.create_rectangle(event.x-space, event.y-space, event.x, event.y, fill=current_p.getColor())
-
-                    info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
-                    info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
-
-                    chaine.configure(text = "Jolie point")
-
-                if(Pivot.top_right(event.x,event.y,space,point_dico)):
-
-                    if(current_p == P1):
-                        P1.setScore()
-                    else:
-                        P2.setScore()
-
-                    can.create_rectangle(event.x, event.y-space, event.x+space, event.y, fill=current_p.getColor())
-
-                    info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
-                    info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
-
-                    chaine.configure(text = "Jolie point")
-
-                if(Pivot.bottom_left(event.x,event.y,space,point_dico)):
-
-                    if(current_p == P1):
-                        P1.setScore()
-                    else:
-                        P2.setScore()
-
-                    can.create_rectangle(event.x, event.y+space, event.x-space, event.y, fill=current_p.getColor())
-
-                    info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
-                    info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
-
-                    chaine.configure(text = "Jolie point")
-
-                if(Pivot.bottom_right(event.x,event.y,space,point_dico)):
-
-                    if(current_p == P1):
-                        P1.setScore()
-                    else:
-                        P2.setScore()
-
-                    can.create_rectangle(event.x, event.y, event.x+space, event.y+space, fill=current_p.getColor())
-
-                    info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
-                    info2.configure(text = "Joueur Rouge = " + str(P2.getScore()))
-
-                    chaine.configure(text = "Jolie point")
+                makeCarre(event.x,event.y)
 
                 if(current_p == P1):
                     global current_p
