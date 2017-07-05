@@ -140,6 +140,7 @@ class Pivot(object):
       P2 = str(str(x)+'_'+str(y2))
       P3 = str(str(x2)+'_'+str(y2))
       P4 = str(str(x2)+'_'+str(y))
+
       point = {}
 
       if(P2 in point_dico):

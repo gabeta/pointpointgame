@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08811fd4-f5e3-4b27-827a-434e49d939c6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Environnement/pivot.py" afterPath="$PROJECT_DIR$/Environnement/pivot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IA/IrisIA.py" afterPath="$PROJECT_DIR$/IA/IrisIA.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IA/irisCeIA.py" afterPath="$PROJECT_DIR$/IA/irisCeIA.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IA/irisCpIA.py" afterPath="$PROJECT_DIR$/IA/irisCpIA.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vsCpIris.py" afterPath="$PROJECT_DIR$/vsCpIris.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,7 +17,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="vsCpIris.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vsCpIris.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vsCpIris.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
@@ -42,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pivot.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pivot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Environnement/pivot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="149" column="32" lean-forward="false" selection-start-line="149" selection-start-column="32" selection-end-line="149" selection-end-column="32" />
+            <state relative-caret-position="501">
+              <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
               <folding>
                 <element signature="e#446#824#0" expanded="false" />
                 <element signature="e#688#824#0" expanded="false" />
@@ -1025,23 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Environnement/pivot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="149" column="32" lean-forward="false" selection-start-line="149" selection-start-column="32" selection-end-line="149" selection-end-column="32" />
-          <folding>
-            <element signature="e#446#824#0" expanded="false" />
-            <element signature="e#688#824#0" expanded="false" />
-            <element signature="e#916#1312#0" expanded="false" />
-            <element signature="e#1405#1800#0" expanded="false" />
-            <element signature="e#1893#2284#0" expanded="false" />
-            <element signature="e#2345#2952#0" expanded="false" />
-            <element signature="e#3014#3621#0" expanded="false" />
-            <element signature="e#3686#4293#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vsCpIris.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -1055,6 +1032,23 @@
             <element signature="e#2094#2451#0" expanded="false" />
             <element signature="e#2512#2869#0" expanded="false" />
             <element signature="e#2929#3727#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Environnement/pivot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding>
+            <element signature="e#446#824#0" expanded="false" />
+            <element signature="e#688#824#0" expanded="false" />
+            <element signature="e#916#1312#0" expanded="false" />
+            <element signature="e#1405#1800#0" expanded="false" />
+            <element signature="e#1893#2284#0" expanded="false" />
+            <element signature="e#2345#2952#0" expanded="false" />
+            <element signature="e#3014#3621#0" expanded="false" />
+            <element signature="e#3686#4293#0" expanded="false" />
           </folding>
         </state>
       </provider>
