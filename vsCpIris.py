@@ -33,6 +33,7 @@ Pivot = Pivot()
 space = 30
 Theight = 540
 Twidth = 630
+r = 5
 
 #Dictionnaire des points
 point_dico = {}
@@ -152,32 +153,37 @@ def IAtour():
         y = point['y']
 
     else:
-        attack = P2.checkOtherDico(point_dico,space)
-        #print(attack)
-        if(len(attack)):
-            P2.defense()
-            point = P2.randPoint(can,point_dico)
-            x = point['x']
-            y = point['y']
-            #x = attack['x']
-            #y = attack['y']
-        else:
-            point = P2.randPoint(can,point_dico)
-            x = point['x']
-            y = point['y']
 
         #Vérification de l'Etat des lieux
-        #if(P2.checkOtherDico(point_dico,space) & P2.checkOwnDico(point_dico,space)):
-        #    pass
-        #else:
-        #    pass
+        defense = P2.checkOtherDico(point_dico,space)
+        attack = P2.checkOwnDico(point_dico,space)
+
+        if(len(defense) | len(attack)):
+
+            if(len(attack)):
+                final_dico = P2.attack()
+            else:
+                final_dico = P2.defense()
+
+            #print(final_dico)
+
+            #point = P2.randPoint(can,point_dico)
+            #x = point['x']
+            #y = point['y']
+            x = final_dico['x']
+            y = final_dico['y']
+            can.create_oval(x-r, y-r, x+r, y+r, fill=current_p.getColor())
+        else:
             #Vérification si il y a un possibilité de construire
-        #    if(P2.canBuild()):
-        #        pass
-        #    else:
-        #        point = P2.randPoint(can,point_dico)
-        #        x = point['x']
-        #       y = point['y']
+            #    if(P2.canBuild()):
+            #        pass
+            #    else:
+            #        point = P2.randPoint(can,point_dico)
+            #        x = point['x']
+            #        y = point['y']
+            point = P2.randPoint(can,point_dico)
+            x = point['x']
+            y = point['y']
 
     #Enregistrement des coordonnées dans le dictionnaire global.
     coord = str(str(x)+'_'+str(y))

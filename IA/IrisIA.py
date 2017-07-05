@@ -57,7 +57,6 @@ class IrisIA(object):
                 else:
                     self.defenseDico[point] = 1
 
-
     def checkOwnDico(self,dico,space):
         if(len(self.attackDico) == 0):
             self.buildDico(self.ownDico,dico,space,True)
@@ -123,7 +122,7 @@ class IrisIA(object):
 
     #Modification du score de l'IA
     def setScore(self):
-        return self.score + 1
+        self.score = self.score + 1
 
     def getColor(self):
         return self.color

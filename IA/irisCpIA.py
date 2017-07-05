@@ -19,8 +19,19 @@ class IrisCpIA(IrisIA):
         IrisIA.__init__(self,color)
 
     def defense(self):
+
         defense_dico = self.defenseDico
-        print(defense_dico)
+
+        for k in defense_dico:
+            array = k.split('_')
+            x = int(array[0])
+            y = int(array[1])
+            final_dico = {}
+            final_dico['x'] = x
+            final_dico['y'] = y
+
+            return final_dico
+
 
     def attack(self):
         attack_dico = self.attackDico
