@@ -38,10 +38,13 @@ class IrisIA(object):
 
             top_left = pivot.get_point_top_left(x,y,space,point_dico)
             top_right = pivot.get_point_top_right(x,y,space,point_dico)
-
+            bottom_left = pivot.get_point_bottom_left(x,y,space,point_dico)
+            bottom_right = pivot.get_point_bottom_right(x,y,space,point_dico)
 
             self.makeBatlleDico(top_left,attack)
             self.makeBatlleDico(top_right,attack)
+            self.makeBatlleDico(bottom_right,attack)
+            self.makeBatlleDico(bottom_left,attack)
 
     def makeBatlleDico(self,dico,attack):
         if(len(dico)):
@@ -66,6 +69,10 @@ class IrisIA(object):
         if(len(self.defenseDico) == 0):
             self.buildDico(self.otherDico,dico,space,False)
         return self.defenseDico
+
+    def clearDico(self):
+        self.attackDico.clear()
+        self.defenseDico.clear()
 
     def canBuild(self):
         pass

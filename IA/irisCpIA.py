@@ -19,11 +19,16 @@ class IrisCpIA(IrisIA):
         IrisIA.__init__(self,color)
 
     def defense(self):
-
         defense_dico = self.defenseDico
+        return self.final_point(defense_dico)
 
+    def attack(self):
+        attack_dico = self.attackDico
+        return self.final_point(attack_dico)
+
+    def final_point(self,dico):
         #Renvoie du premier point d'une manière aléatoire
-        for k in defense_dico:
+        for k in dico:
             array = k.split('_')
             x = int(array[0])
             y = int(array[1])
@@ -33,8 +38,5 @@ class IrisCpIA(IrisIA):
 
             return final_dico
 
-    def attack(self):
-        attack_dico = self.attackDico
-
-    def construire(self):
+    def build(self):
         pass

@@ -165,11 +165,8 @@ def IAtour():
             else:
                 final_dico = P2.defense()
 
-            #print(final_dico)
+            P2.clearDico()
 
-            #point = P2.randPoint(can,point_dico)
-            #x = point['x']
-            #y = point['y']
             x = final_dico['x']
             y = final_dico['y']
             can.create_oval(x-r, y-r, x+r, y+r, fill=current_p.getColor())

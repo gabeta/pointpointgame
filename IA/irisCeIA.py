@@ -13,7 +13,7 @@
 
 from IA.IrisIA import IrisIA
 
-class IrisCpIA(IrisIA):
+class IrisCeIA(IrisIA):
 
     def __init__(self,color):
         IrisIA.__init__(self,color)
