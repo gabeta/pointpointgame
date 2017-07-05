@@ -153,9 +153,14 @@ def IAtour():
 
     else:
         attack = P2.checkOtherDico(point_dico,space)
+        #print(attack)
         if(len(attack)):
-            x = attack['x']
-            y = attack['y']
+            P2.defense()
+            point = P2.randPoint(can,point_dico)
+            x = point['x']
+            y = point['y']
+            #x = attack['x']
+            #y = attack['y']
         else:
             point = P2.randPoint(can,point_dico)
             x = point['x']

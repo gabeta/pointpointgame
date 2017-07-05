@@ -19,10 +19,11 @@ class IrisCpIA(IrisIA):
         IrisIA.__init__(self,color)
 
     def defense(self):
-        pass
+        defense_dico = self.defenseDico
+        print(defense_dico)
 
     def attack(self):
-        pass
+        attack_dico = self.attackDico
 
-    def mouliner(self):
+    def construire(self):
         pass

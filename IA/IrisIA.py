@@ -11,11 +11,9 @@
 ########################################################
 
 from random import randrange
-
 import time
 
 from Environnement.pivot import Pivot
-from Environnement.terrain import Terrain
 
 pivot = Pivot()
 
@@ -37,65 +35,63 @@ class IrisIA(object):
             array = k.split('_')
             x = int(array[0])
             y = int(array[1])
-            top = pivot.get_point_top(x,y,space,point_dico)
 
-            self.makeBatlleDico(top,attack)
+            top_left = pivot.get_point_top_left(x,y,space,point_dico)
+            top_right = pivot.get_point_top_right(x,y,space,point_dico)
+
+
+            self.makeBatlleDico(top_left,attack)
+            self.makeBatlleDico(top_right,attack)
 
     def makeBatlleDico(self,dico,attack):
         if(len(dico)):
+            point = str(str(dico['x'])+'_'+str(dico['y']))
             if(attack):
-                if (dico['x'],dico['y']) in self.attackDico:
-                    self.attackDico[(dico['x'],dico['y'])] = self.attackDico[(dico['x'],dico['y'])] + 1
+                if point in self.attackDico:
+                    self.attackDico[point] = self.attackDico[point] + 1
                 else:
-                    self.attackDico[(dico['x'],dico['y'])] = 1
+                    self.attackDico[point] = 1
             else:
-                if (dico['x'],dico['y']) in self.defenseDico:
-                    self.defenseDico[(dico['x'],dico['y'])] = self.defenseDico[(dico['x'],dico['y'])] + 1
+                if point in self.defenseDico:
+                    self.defenseDico[point] = self.defenseDico[point] + 1
                 else:
-                    self.defenseDico[(dico['x'],dico['y'])] = 1
+                    self.defenseDico[point] = 1
 
 
     def checkOwnDico(self,dico,space):
-        if(len(self.attackDico) is False):
+        if(len(self.attackDico) == 0):
             self.buildDico(self.ownDico,dico,space,True)
         return self.attackDico
 
-
     def checkOtherDico(self,dico,space):
-        if(len(self.defenseDico) is False):
-            return self.buildDico(self.otherDico,dico,space,False)
+        if(len(self.defenseDico) == 0):
+            self.buildDico(self.otherDico,dico,space,False)
         return self.defenseDico
-
 
     def canBuild(self):
         pass
 
-
     def randPoint(self,can,point_dico):
 
         r = 5
-        xMod = 1
-        yMod = 1
         boucle = True
 
         while boucle:
 
-
-            while xMod:
-                x = randrange(30, (630 - 30))
-                xMod = x % 30
-
-            while yMod:
-                y = randrange(30, (540 - 30))
-                yMod = y % 30
+            y = randrange(30, (540 - 30))
+            yMod = y % 30
+            x = randrange(30, (630 - 30))
+            xMod = x % 30
 
             point = str(str(x)+'_'+str(y))
 
-            if point in point_dico:
-                time.sleep(2)
+            if (yMod) | (xMod):
                 boucle = True
             else:
-                boucle = False
+                if point in point_dico:
+                    boucle = True
+                else:
+                    boucle = False
 
         can.create_oval(x-r, y-r, x+r, y+r, fill=self.getColor())
 
