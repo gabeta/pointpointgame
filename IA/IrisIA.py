@@ -24,6 +24,8 @@ class IrisIA(object):
     score = 0
     attackDico = {}
     defenseDico = {}
+    onePointDico = {}
+    twoPointDico = {}
 
     def __init__(self,color):
         self.color = color
@@ -73,9 +75,63 @@ class IrisIA(object):
     def clearDico(self):
         self.attackDico.clear()
         self.defenseDico.clear()
+        self.onePointDico.clear()
+        self.twoPointDico.clear()
+
+    def checkOnePointDico(self,point_dico,space):
+        #Parcourt le dictionnaire
+        for k in self.ownDico:
+            #Exploder le K par les enderscorts
+            array = k.split('_')
+            x = int(array[0])
+            y = int(array[1])
+
+            top_left = pivot.check_three_points_top_left(x,y,space,point_dico)
+            print(top_left)
+            if(len(top_left)):
+                point = str(str(top_left['x'])+'_'+str(top_left['y']))
+                if point in self.onePointDico:
+                    self.onePointDico[point] = self.onePointDico[point] + 1
+                else:
+                    self.onePointDico[point] = 1
+
+    def checkTwoPointDico(self,point_dico,space):
+        #Parcourt le dictionnaire
+        for k in self.ownDico:
+            #Exploder le K par les enderscorts
+            array = k.split('_')
+            x = int(array[0])
+            y = int(array[1])
+
+            top_left = pivot.check_two_points_top_left(x,y,space,point_dico)
+            top_right = pivot.check_two_points_top_right(x,y,space,point_dico)
+            bottom_left = pivot.check_two_points_bottom_left(x,y,space,point_dico)
+            bottom_right = pivot.check_two_points_bottom_right(x,y,space,point_dico)
+
+            self.makeBuildDico(top_left,point_dico)
+            self.makeBuildDico(top_right,point_dico)
+            self.makeBuildDico(bottom_left,point_dico)
+            self.makeBuildDico(bottom_right,point_dico)
+
+    def makeBuildDico(self,dico,one_point):
+        if(len(dico)):
+            point = str(str(dico['x'])+'_'+str(dico['y']))
+            if(one_point):
+                if point in self.onePointDico:
+                    self.onePointDico[point] = self.onePointDico[point] + 1
+                else:
+                    self.onePointDico[point] = 1
+            else:
+                if point in self.twoPointDico:
+                    self.twoPointDico[point] = self.twoPointDico[point] + 1
+                else:
+                    self.twoPointDico[point] = 1
 
     def canBuild(self):
-        pass
+        if len(self.onePointDico) | len(self.twoPointDico):
+            return True
+        else:
+            return False
 
     def randPoint(self,can,point_dico):
 

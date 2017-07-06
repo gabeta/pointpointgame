@@ -38,5 +38,10 @@ class IrisCpIA(IrisIA):
 
             return final_dico
 
-    def build(self):
-        pass
+    def buildWithOnePoint(self):
+        onepointdico = self.onePointDico
+        return self.final_point(onepointdico)
+
+    def buildWithTwoPoint(self):
+        twopointdico = self.twoPointDico
+        return self.final_point(twopointdico)

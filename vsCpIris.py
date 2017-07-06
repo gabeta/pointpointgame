@@ -11,6 +11,7 @@
 ########################################################
 
 from tkinter import *
+from random import randrange
 
 from Environnement.player import Player
 from Environnement.pivot import Pivot
@@ -158,29 +159,44 @@ def IAtour():
         defense = P2.checkOtherDico(point_dico,space)
         attack = P2.checkOwnDico(point_dico,space)
 
-        if(len(defense) | len(attack)):
+        if(len(attack)):
 
-            if(len(attack)):
-                final_dico = P2.attack()
-            else:
-                final_dico = P2.defense()
-
-            P2.clearDico()
-
+            final_dico = P2.attack()
             x = final_dico['x']
             y = final_dico['y']
             can.create_oval(x-r, y-r, x+r, y+r, fill=current_p.getColor())
+
         else:
-            #Vérification si il y a un possibilité de construire
-            #    if(P2.canBuild()):
-            #        pass
-            #    else:
-            #        point = P2.randPoint(can,point_dico)
-            #        x = point['x']
-            #        y = point['y']
-            point = P2.randPoint(can,point_dico)
-            x = point['x']
-            y = point['y']
+
+            vue = randrange(1,20) % 2
+
+            if( len(defense) & vue):
+                final_dico = P2.defense()
+                x = final_dico['x']
+                y = final_dico['y']
+                can.create_oval(x-r, y-r, x+r, y+r, fill=current_p.getColor())
+            else:
+                #Vérification si il y a un possibilité de construire
+                P2.checkOnePointDico(point_dico,space)
+                P2.checkTwoPointDico(point_dico,space)
+
+                if(P2.canBuild()):
+                    if(len(P2.twoPointDico)):
+                        point = P2.buildWithTwoPoint()
+                    else:
+                        point = P2.buildWithOnePoint()
+
+                    print(point)
+                    x = point['x']
+                    y = point['y']
+                    can.create_oval(x-r, y-r, x+r, y+r, fill=current_p.getColor())
+                else:
+                    point = P2.randPoint(can,point_dico)
+                    x = point['x']
+                    y = point['y']
+
+    #On vide tous les dictionnaires de l'IA
+    P2.clearDico()
 
     #Enregistrement des coordonnées dans le dictionnaire global.
     coord = str(str(x)+'_'+str(y))
