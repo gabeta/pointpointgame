@@ -6,7 +6,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Environnement/pivot.py" afterPath="$PROJECT_DIR$/Environnement/pivot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IA/IrisIA.py" afterPath="$PROJECT_DIR$/IA/IrisIA.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IA/irisCpIA.py" afterPath="$PROJECT_DIR$/IA/irisCpIA.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vsCpIris.py" afterPath="$PROJECT_DIR$/vsCpIris.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,18 +24,23 @@
       <file leaf-file-name="irisCpIA.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IA/irisCpIA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="682">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <element signature="e#504#531#0" expanded="false" />
+                <element signature="e#564#641#0" expanded="false" />
+                <element signature="e#673#747#0" expanded="false" />
+                <element signature="e#789#1077#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vsCpIris.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vsCpIris.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vsCpIris.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="215" column="10" lean-forward="true" selection-start-line="215" selection-start-column="10" selection-end-line="215" selection-end-column="10" />
+            <state relative-caret-position="506">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#382#403#0" expanded="true" />
                 <element signature="e#893#1177#0" expanded="false" />
@@ -47,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IrisIA.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IrisIA.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IA/IrisIA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="835">
+              <caret line="192" column="0" lean-forward="true" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
               <folding>
                 <element signature="e#377#405#0" expanded="true" />
                 <element signature="e#672#690#0" expanded="false" />
@@ -60,18 +64,18 @@
                 <element signature="e#2036#2154#0" expanded="false" />
                 <element signature="e#2205#2328#0" expanded="false" />
                 <element signature="e#2363#2487#0" expanded="false" />
-                <element signature="e#2547#3147#0" expanded="false" />
-                <element signature="e#3207#3945#0" expanded="false" />
-                <element signature="e#3999#4505#0" expanded="false" />
-                <element signature="e#4539#4653#0" expanded="false" />
-                <element signature="e#4704#5302#0" expanded="false" />
-                <element signature="e#5455#5474#0" expanded="false" />
-                <element signature="e#5558#5595#0" expanded="false" />
-                <element signature="e#5754#5775#0" expanded="false" />
-                <element signature="e#5869#5898#0" expanded="false" />
-                <element signature="e#5951#5968#0" expanded="false" />
-                <element signature="e#6037#6064#0" expanded="false" />
-                <element signature="e#6098#6115#0" expanded="false" />
+                <element signature="e#2547#3269#0" expanded="false" />
+                <element signature="e#3329#4047#0" expanded="false" />
+                <element signature="e#4101#4607#0" expanded="false" />
+                <element signature="e#4641#4755#0" expanded="false" />
+                <element signature="e#4806#5404#0" expanded="false" />
+                <element signature="e#5557#5576#0" expanded="false" />
+                <element signature="e#5660#5697#0" expanded="false" />
+                <element signature="e#5856#5877#0" expanded="false" />
+                <element signature="e#5971#6000#0" expanded="false" />
+                <element signature="e#6053#6070#0" expanded="false" />
+                <element signature="e#6139#6166#0" expanded="false" />
+                <element signature="e#6200#6217#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -80,27 +84,45 @@
       <file leaf-file-name="pivot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Environnement/pivot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="835">
-              <caret line="285" column="0" lean-forward="true" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+            <state relative-caret-position="358">
+              <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
-                <element signature="e#544#993#0" expanded="false" />
-                <element signature="e#1078#1623#0" expanded="false" />
-                <element signature="e#1664#2210#0" expanded="false" />
-                <element signature="e#2292#2500#0" expanded="false" />
-                <element signature="e#2589#2799#0" expanded="false" />
-                <element signature="e#2895#3117#0" expanded="false" />
-                <element signature="e#3214#3436#0" expanded="false" />
-                <element signature="e#3533#3755#0" expanded="false" />
-                <element signature="e#3816#4423#0" expanded="false" />
-                <element signature="e#4485#5092#0" expanded="false" />
-                <element signature="e#5157#5764#0" expanded="false" />
-                <element signature="e#5828#6436#0" expanded="false" />
-                <element signature="e#6506#7100#0" expanded="false" />
-                <element signature="e#7168#7401#0" expanded="false" />
-                <element signature="e#7470#7703#0" expanded="false" />
-                <element signature="e#7774#8007#0" expanded="false" />
-                <element signature="e#8079#8312#0" expanded="false" />
-                <marker date="1499301152236" expanded="false" signature="436:2245" ph="..." />
+                <element signature="e#480#1017#0" expanded="false" />
+                <element signature="e#1083#3180#0" expanded="false" />
+                <element signature="e#3227#3435#0" expanded="false" />
+                <element signature="e#3524#3734#0" expanded="false" />
+                <element signature="e#3830#4052#0" expanded="false" />
+                <element signature="e#4149#4371#0" expanded="false" />
+                <element signature="e#4468#4690#0" expanded="false" />
+                <element signature="e#4751#5358#0" expanded="false" />
+                <element signature="e#5420#6027#0" expanded="false" />
+                <element signature="e#6092#6699#0" expanded="false" />
+                <element signature="e#6763#7371#0" expanded="false" />
+                <element signature="e#7441#7682#0" expanded="false" />
+                <element signature="e#7753#7994#0" expanded="false" />
+                <element signature="e#8067#8308#0" expanded="false" />
+                <element signature="e#8382#8623#0" expanded="false" />
+                <element signature="e#8691#8930#0" expanded="false" />
+                <element signature="e#8999#9238#0" expanded="false" />
+                <element signature="e#9309#9548#0" expanded="false" />
+                <element signature="e#9620#9859#0" expanded="false" />
+                <element signature="e#9942#10148#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="terrain.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Environnement/terrain.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="27" />
+              <folding>
+                <element signature="e#597#615#0" expanded="false" />
+                <element signature="e#649#666#0" expanded="false" />
+                <element signature="e#769#970#0" expanded="false" />
+                <element signature="e#1063#1262#0" expanded="false" />
+                <element signature="e#1113#1256#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -119,6 +141,7 @@
     <findStrings>
       <find>str</find>
       <find>print</find>
+      <find>pri</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,10 +166,11 @@
         <option value="$PROJECT_DIR$/vsIris.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/IA/irisCeIA.py" />
-        <option value="$PROJECT_DIR$/IA/irisCpIA.py" />
+        <option value="$PROJECT_DIR$/Environnement/terrain.py" />
+        <option value="$PROJECT_DIR$/vsCpIris.py" />
         <option value="$PROJECT_DIR$/IA/IrisIA.py" />
         <option value="$PROJECT_DIR$/Environnement/pivot.py" />
-        <option value="$PROJECT_DIR$/vsCpIris.py" />
+        <option value="$PROJECT_DIR$/IA/irisCpIA.py" />
       </list>
     </option>
   </component>
@@ -237,6 +261,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Gabeta/PycharmProjects/point_point/Environnement/terrain.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -558,7 +583,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -900,22 +925,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Environnement/terrain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="46" column="27" lean-forward="true" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="353">
+          <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="27" />
+          <folding>
+            <element signature="e#597#615#0" expanded="false" />
+            <element signature="e#649#666#0" expanded="false" />
+            <element signature="e#769#970#0" expanded="false" />
+            <element signature="e#1063#1262#0" expanded="false" />
+            <element signature="e#1113#1256#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IA/irisCpIA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#504#531#0" expanded="false" />
+            <element signature="e#564#641#0" expanded="false" />
+            <element signature="e#673#747#0" expanded="false" />
+            <element signature="e#789#1077#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vsCpIris.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#382#403#0" expanded="true" />
+            <element signature="e#893#1177#0" expanded="false" />
+            <element signature="e#1240#2900#0" expanded="false" />
+            <element signature="e#2958#3756#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Environnement/pivot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="e#480#1017#0" expanded="false" />
+            <element signature="e#1083#3180#0" expanded="false" />
+            <element signature="e#3227#3435#0" expanded="false" />
+            <element signature="e#3524#3734#0" expanded="false" />
+            <element signature="e#3830#4052#0" expanded="false" />
+            <element signature="e#4149#4371#0" expanded="false" />
+            <element signature="e#4468#4690#0" expanded="false" />
+            <element signature="e#4751#5358#0" expanded="false" />
+            <element signature="e#5420#6027#0" expanded="false" />
+            <element signature="e#6092#6699#0" expanded="false" />
+            <element signature="e#6763#7371#0" expanded="false" />
+            <element signature="e#7441#7682#0" expanded="false" />
+            <element signature="e#7753#7994#0" expanded="false" />
+            <element signature="e#8067#8308#0" expanded="false" />
+            <element signature="e#8382#8623#0" expanded="false" />
+            <element signature="e#8691#8930#0" expanded="false" />
+            <element signature="e#8999#9238#0" expanded="false" />
+            <element signature="e#9309#9548#0" expanded="false" />
+            <element signature="e#9620#9859#0" expanded="false" />
+            <element signature="e#9942#10148#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IA/IrisIA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="835">
+          <caret line="192" column="0" lean-forward="true" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
           <folding>
             <element signature="e#377#405#0" expanded="true" />
             <element signature="e#672#690#0" expanded="false" />
@@ -924,66 +1009,18 @@
             <element signature="e#2036#2154#0" expanded="false" />
             <element signature="e#2205#2328#0" expanded="false" />
             <element signature="e#2363#2487#0" expanded="false" />
-            <element signature="e#2547#3147#0" expanded="false" />
-            <element signature="e#3207#3945#0" expanded="false" />
-            <element signature="e#3999#4505#0" expanded="false" />
-            <element signature="e#4539#4653#0" expanded="false" />
-            <element signature="e#4704#5302#0" expanded="false" />
-            <element signature="e#5455#5474#0" expanded="false" />
-            <element signature="e#5558#5595#0" expanded="false" />
-            <element signature="e#5754#5775#0" expanded="false" />
-            <element signature="e#5869#5898#0" expanded="false" />
-            <element signature="e#5951#5968#0" expanded="false" />
-            <element signature="e#6037#6064#0" expanded="false" />
-            <element signature="e#6098#6115#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Environnement/pivot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
-          <caret line="285" column="0" lean-forward="true" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
-          <folding>
-            <element signature="e#544#993#0" expanded="false" />
-            <element signature="e#1078#1623#0" expanded="false" />
-            <element signature="e#1664#2210#0" expanded="false" />
-            <element signature="e#2292#2500#0" expanded="false" />
-            <element signature="e#2589#2799#0" expanded="false" />
-            <element signature="e#2895#3117#0" expanded="false" />
-            <element signature="e#3214#3436#0" expanded="false" />
-            <element signature="e#3533#3755#0" expanded="false" />
-            <element signature="e#3816#4423#0" expanded="false" />
-            <element signature="e#4485#5092#0" expanded="false" />
-            <element signature="e#5157#5764#0" expanded="false" />
-            <element signature="e#5828#6436#0" expanded="false" />
-            <element signature="e#6506#7100#0" expanded="false" />
-            <element signature="e#7168#7401#0" expanded="false" />
-            <element signature="e#7470#7703#0" expanded="false" />
-            <element signature="e#7774#8007#0" expanded="false" />
-            <element signature="e#8079#8312#0" expanded="false" />
-            <marker date="1499301152236" expanded="false" signature="436:2245" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IA/irisCpIA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vsCpIris.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="215" column="10" lean-forward="true" selection-start-line="215" selection-start-column="10" selection-end-line="215" selection-end-column="10" />
-          <folding>
-            <element signature="e#382#403#0" expanded="true" />
-            <element signature="e#893#1177#0" expanded="false" />
-            <element signature="e#1240#2900#0" expanded="false" />
-            <element signature="e#2958#3756#0" expanded="false" />
+            <element signature="e#2547#3269#0" expanded="false" />
+            <element signature="e#3329#4047#0" expanded="false" />
+            <element signature="e#4101#4607#0" expanded="false" />
+            <element signature="e#4641#4755#0" expanded="false" />
+            <element signature="e#4806#5404#0" expanded="false" />
+            <element signature="e#5557#5576#0" expanded="false" />
+            <element signature="e#5660#5697#0" expanded="false" />
+            <element signature="e#5856#5877#0" expanded="false" />
+            <element signature="e#5971#6000#0" expanded="false" />
+            <element signature="e#6053#6070#0" expanded="false" />
+            <element signature="e#6139#6166#0" expanded="false" />
+            <element signature="e#6200#6217#0" expanded="false" />
           </folding>
         </state>
       </provider>

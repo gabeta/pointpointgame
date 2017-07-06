@@ -186,7 +186,6 @@ def IAtour():
                     else:
                         point = P2.buildWithOnePoint()
 
-                    print(point)
                     x = point['x']
                     y = point['y']
                     can.create_oval(x-r, y-r, x+r, y+r, fill=current_p.getColor())

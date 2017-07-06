@@ -87,13 +87,14 @@ class IrisIA(object):
             y = int(array[1])
 
             top_left = pivot.check_three_points_top_left(x,y,space,point_dico)
-            print(top_left)
-            if(len(top_left)):
-                point = str(str(top_left['x'])+'_'+str(top_left['y']))
-                if point in self.onePointDico:
-                    self.onePointDico[point] = self.onePointDico[point] + 1
-                else:
-                    self.onePointDico[point] = 1
+            top_right = pivot.check_three_points_top_right(x,y,space,point_dico)
+            bottom_left = pivot.check_three_points_bottom_left(x,y,space,point_dico)
+            bottom_right = pivot.check_three_points_bottom_right(x,y,space,point_dico)
+
+            self.makeBuildDico(top_left,True)
+            self.makeBuildDico(top_right,True)
+            self.makeBuildDico(bottom_left,True)
+            self.makeBuildDico(bottom_right,True)
 
     def checkTwoPointDico(self,point_dico,space):
         #Parcourt le dictionnaire
@@ -108,10 +109,10 @@ class IrisIA(object):
             bottom_left = pivot.check_two_points_bottom_left(x,y,space,point_dico)
             bottom_right = pivot.check_two_points_bottom_right(x,y,space,point_dico)
 
-            self.makeBuildDico(top_left,point_dico)
-            self.makeBuildDico(top_right,point_dico)
-            self.makeBuildDico(bottom_left,point_dico)
-            self.makeBuildDico(bottom_right,point_dico)
+            self.makeBuildDico(top_left,False)
+            self.makeBuildDico(top_right,False)
+            self.makeBuildDico(bottom_left,False)
+            self.makeBuildDico(bottom_right,False)
 
     def makeBuildDico(self,dico,one_point):
         if(len(dico)):
