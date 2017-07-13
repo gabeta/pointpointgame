@@ -137,6 +137,7 @@ def point(event):
                 makeCarre(event.x,event.y)
 
                 P2.setOtherDico(value,current_p.getColor())
+                P2.updateRandomList(value)
 
                 global current_p
                 current_p = P2
@@ -203,6 +204,7 @@ def IAtour():
 
     #Enregistrer les cordonnées de l'IA dans son dico
     P2.setOwnDico(coord)
+    P2.updateRandomList(coord)
 
     #Tentative de faire un carré si possible
     makeCarre(x,y)

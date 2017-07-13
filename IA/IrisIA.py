@@ -10,7 +10,7 @@
 #
 ########################################################
 
-from random import randrange
+import random
 import time
 
 from Environnement.pivot import Pivot
@@ -26,9 +26,31 @@ class IrisIA(object):
     defenseDico = {}
     onePointDico = {}
     twoPointDico = {}
+    randomList = []
+    randomListX = []
+    randomListY = []
 
+#540
+#630
     def __init__(self,color):
         self.color = color
+        self.makeRandomList()
+
+    def makeRandomList(self):
+        x = 30
+        while x<630 :
+            y = 30
+            while y<540 :
+                coord = str(str(x)+'_'+str(y))
+                self.randomList.append(coord)
+                y = y + 30
+
+            x = x + 30
+
+
+    def updateRandomList(self,coord):
+        self.randomList.remove(coord)
+
 
     def buildDico(self,dico,point_dico,space,attack):
         #Parcourt le dictionnaire
@@ -137,24 +159,12 @@ class IrisIA(object):
     def randPoint(self,can,point_dico):
 
         r = 5
-        boucle = True
 
-        while boucle:
-
-            y = randrange(30, (540 - 30))
-            yMod = y % 30
-            x = randrange(30, (630 - 30))
-            xMod = x % 30
-
-            point = str(str(x)+'_'+str(y))
-
-            if (yMod) | (xMod):
-                boucle = True
-            else:
-                if point in point_dico:
-                    boucle = True
-                else:
-                    boucle = False
+        secure_random = random.SystemRandom()
+        coord = secure_random.choice(self.randomList)
+        array = coord.split('_')
+        x = int(array[0])
+        y = int(array[1])
 
         can.create_oval(x-r, y-r, x+r, y+r, fill=self.getColor())
 
