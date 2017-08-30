@@ -4,8 +4,7 @@
     <list default="true" id="08811fd4-f5e3-4b27-827a-434e49d939c6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IA/IrisIA.py" afterPath="$PROJECT_DIR$/IA/IrisIA.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vsCpIris.py" afterPath="$PROJECT_DIR$/vsCpIris.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/point.py" afterPath="$PROJECT_DIR$/point.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IrisIA.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IrisIA.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IA/IrisIA.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="e#377#390#0" expanded="true" />
                 <element signature="e#1177#1867#0" expanded="false" />
@@ -51,11 +50,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="point.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/point.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#344#365#0" expanded="true" />
+                <element signature="e#846#1130#0" expanded="false" />
+                <element signature="e#874#1128#0" expanded="false" />
+                <element signature="e#1193#2853#0" expanded="false" />
+                <element signature="e#1659#2016#0" expanded="false" />
+                <element signature="e#2076#2433#0" expanded="false" />
+                <element signature="e#2494#2851#0" expanded="false" />
+                <element signature="e#2895#3957#0" expanded="false" />
+                <element signature="e#3308#3953#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="irisCpIA.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IA/irisCpIA.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
-              <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
+              <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -65,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/vsCpIris.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#1240#2900#0" expanded="false" />
               </folding>
@@ -107,7 +126,6 @@
         <option value="$PROJECT_DIR$/pivot.py" />
         <option value="$PROJECT_DIR$/terrain.py" />
         <option value="$PROJECT_DIR$/IA/IA.py" />
-        <option value="$PROJECT_DIR$/point.py" />
         <option value="$PROJECT_DIR$/vsIris.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/IA/irisCeIA.py" />
@@ -117,6 +135,7 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/vsCpIris.py" />
         <option value="$PROJECT_DIR$/IA/IrisIA.py" />
+        <option value="$PROJECT_DIR$/point.py" />
       </list>
     </option>
   </component>
@@ -165,39 +184,11 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="point_point" />
+              <option name="myItemId" value="pointpointgame" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="point_point" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="point_point" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="point_point" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="point_point" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="point_point" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Environnement" />
+              <option name="myItemId" value="pointpointgame" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -217,7 +208,7 @@
       <recent name="C:\Users\Gabeta\PycharmProjects\point_point\module" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.vsCpIris">
+  <component name="RunManager" selected="Python.point">
     <configuration default="false" name="point" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -459,10 +450,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.vsCpIris" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.IrisIA" />
-        <item index="3" class="java.lang.String" itemvalue="Python.point" />
+        <item index="0" class="java.lang.String" itemvalue="Python.point" />
+        <item index="1" class="java.lang.String" itemvalue="Python.vsCpIris" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.IrisIA" />
         <item index="4" class="java.lang.String" itemvalue="Python.vsIris" />
       </list>
     </recent_temporary>
@@ -472,10 +463,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="39" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24788584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21300212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -787,13 +778,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/payer.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
-          <caret line="2319" column="0" lean-forward="true" selection-start-line="2319" selection-start-column="0" selection-end-line="2319" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -802,13 +786,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IA/IA.py" />
-    <entry file="file://$PROJECT_DIR$/point.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Environnement/player.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -862,7 +839,7 @@
     <entry file="file://$PROJECT_DIR$/IA/irisCpIA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
-          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
+          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="33" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -870,7 +847,7 @@
     <entry file="file://$PROJECT_DIR$/vsCpIris.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1240#2900#0" expanded="false" />
           </folding>
@@ -880,7 +857,7 @@
     <entry file="file://$PROJECT_DIR$/IA/IrisIA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
             <element signature="e#377#390#0" expanded="true" />
             <element signature="e#1177#1867#0" expanded="false" />
@@ -892,6 +869,32 @@
             <element signature="e#3752#4470#0" expanded="false" />
             <element signature="e#4524#5030#0" expanded="false" />
             <element signature="e#5064#5178#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="2177" column="18" lean-forward="true" selection-start-line="2177" selection-start-column="18" selection-end-line="2177" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#344#365#0" expanded="true" />
+            <element signature="e#846#1130#0" expanded="false" />
+            <element signature="e#874#1128#0" expanded="false" />
+            <element signature="e#1193#2853#0" expanded="false" />
+            <element signature="e#1659#2016#0" expanded="false" />
+            <element signature="e#2076#2433#0" expanded="false" />
+            <element signature="e#2494#2851#0" expanded="false" />
+            <element signature="e#2895#3957#0" expanded="false" />
+            <element signature="e#3308#3953#0" expanded="false" />
           </folding>
         </state>
       </provider>
