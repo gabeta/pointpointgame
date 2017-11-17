@@ -221,28 +221,32 @@ def IAtour():
 fen = Tk()
 fen.title("Point point Game By EnighmaLab")
 
-can = Canvas(fen, width =Twidth, height =Theight, bg="light yellow")
+can = Canvas(fen, width =Twidth, height =Theight, bg="light yellow",borderwidth=2,relief=SOLID)
 can.bind('<Button-1>', point)
-can.pack()
+can.grid(row = 0, rowspan = 45)
 
 terrain = Terrain(Twidth,Theight,space,can)
 
-b1 = Button(fen, text='Commencer', command=create_plateform)
-b1.pack()
+b1 = Button(fen,bg='#FAF8E9',relief=GROOVE, text='Commencer',width=15, command=create_plateform)
+b1.grid(row = 0,column = 1)
+
+b2 = Button(fen,bg='#FAF8E9',relief=GROOVE, text='Instructtion',width=15, command=create_plateform)
+b2.grid(row = 1,column = 1)
+
+info = Label(fen,bg='#6699CC', text='Joueur Bleu',width=15,pady=5,relief=GROOVE)
+info.grid(row = 13,column = 1)
+
+info2 = Label(fen,bg='#FF6666', text='Joueur Rouge',width=15,pady=5,relief=GROOVE)
+info2.grid(row = 15,column = 1)
+
+b3 = Button(fen,bg='#FAF8E9',relief=GROOVE, text='Quitter',width=15, command=create_plateform)
+b3.grid(row = 44,column = 1)
 
 role = Label(fen)
-role.pack()
+role.grid(row = 44)
 
-load = Label(fen)
-load.pack()
+chaine = Label(fen,fg='red')
+chaine.grid(row = 45)
 
-chaine = Label(fen)
-chaine.pack()
-
-info = Label(fen)
-info.pack()
-
-info2 = Label(fen)
-info2.pack()
 
 fen.mainloop()
