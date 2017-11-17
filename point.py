@@ -3,6 +3,7 @@
 #
 # Catégorie        : Stratégie
 # Auteur           : Gabeta Soro (Alchimiste des codes)
+# Pseudo           : @lChiMi5tE_d0t_toRr€nt
 # Compagnie        : EnighmaLab
 # Date de création : 17/05/2017
 # Scène            : Player vs Player
