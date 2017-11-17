@@ -37,6 +37,7 @@ point_dico = {}
 #Crétation de la plateform de jeu
 def create_plateform():
 
+    global begin
 
     if(begin is False):
         d = 0
@@ -46,7 +47,6 @@ def create_plateform():
         terrain.horizontalLine()
         terrain.verticalLine()
 
-        global begin
         begin = True
 
 #Marquer un point en faisant un carré
@@ -111,6 +111,8 @@ def makeCarre(x,y):
 #Création du point
 def point(event):
 
+    global current_p
+
     if(begin):
 
         if(terrain.overFlow(event.y,event.x) & terrain.checkRayon(event.y,event.x)):
@@ -134,11 +136,9 @@ def point(event):
                 makeCarre(event.x,event.y)
 
                 if(current_p == P1):
-                    global current_p
                     current_p = P2
                     next_color = "rouge"
                 else:
-                    global current_p
                     current_p = P1
                     next_color = "bleu"
 

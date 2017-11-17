@@ -42,6 +42,8 @@ point_dico = {}
 #Crétation de la plateform de jeu
 def create_plateform():
 
+    global begin
+
     if(begin is False):
         d = 0
         info.configure(text = "Joueur Bleu  = " + str(P1.getScore()))
@@ -50,7 +52,6 @@ def create_plateform():
         terrain.horizontalLine()
         terrain.verticalLine()
 
-        global begin
         begin = True
 
 #Marquer un point en faisant un carré
@@ -115,6 +116,8 @@ def makeCarre(x,y):
 #Au tour de l'utilisateur de jouer
 def point(event):
 
+    global current_p
+
     if (begin) & (current_p == P1):
 
         if(terrain.overFlow(event.y,event.x) & terrain.checkRayon(event.y,event.x)):
@@ -139,13 +142,14 @@ def point(event):
                 P2.setOtherDico(value,current_p.getColor())
                 P2.updateRandomList(value)
 
-                global current_p
                 current_p = P2
 
                 IAtour()
 
 #Au tour de l'IA de jouer.
 def IAtour():
+
+    global current_p
 
     if(len(P2.getOwnDico()) == 0):
 
@@ -210,7 +214,6 @@ def IAtour():
     makeCarre(x,y)
 
     #Donner la main à l'utilisateur
-    global current_p
     current_p = P1
 
 #Corps principale du programme
