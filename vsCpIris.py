@@ -239,7 +239,7 @@ info.grid(row = 13,column = 1)
 info2 = Label(fen,bg='#FF6666', text='Joueur Rouge',width=15,pady=5,relief=GROOVE)
 info2.grid(row = 15,column = 1)
 
-b3 = Button(fen,bg='#FAF8E9',relief=GROOVE, text='Quitter',width=15, command=create_plateform)
+b3 = Button(fen,bg='#FAF8E9',relief=GROOVE, text='Quitter',width=15, command=fen.quit)
 b3.grid(row = 44,column = 1)
 
 role = Label(fen)
